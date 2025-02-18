@@ -1,16 +1,8 @@
-#include <unistd.h>
-#include <stdlib.h>
-#include <sys/wait.h>
-
-typedef struct s_cmd
-{
-	char			**av;
-	struct s_cmd	*next;
-	struct s_cmd	*prev;
-}	t_cmd;
+#include "micro.h"
 
 t_cmd	*parse_commands(char **av) {
-	
+	if (!pipe_in_av(av))
+		return (create_cmd_node(NULL, av));
 }
 
 int	execute_command(t_cmd *cmd) {
