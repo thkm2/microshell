@@ -12,8 +12,4 @@ typedef struct s_cmd
 	struct s_cmd	*prev;
 }	t_cmd;
 
-// utils
-int pipe_in_av(char **av);
-t_cmd *create_cmd_node(t_cmd **head, char **value);
-
 #endif
